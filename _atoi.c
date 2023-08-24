@@ -1,8 +1,8 @@
 #include "shell.h"
-
 /**
- * The code has to be interactive as we go
- * The code will return 1 if it is in interactive mode, 0 if it is not
+ *this has to be interactive and it must return true if shell is in interactive mode
+ *@info: this is well strcutured address
+ *Return: 1 if true, 0 if false.
  */
 
 int interactive(info_t *info)
@@ -11,9 +11,9 @@ int interactive(info_t *info)
 }
 
 /**
- * The is_delim will check if the character is a delimiter
- * @c shows us the character to check for
- * @delim will give us the delimiter info, This will return 1 if it comes true and 0 if it is fals
+ *The is_delim will check if the character is a delimiter
+ *@c shows us the character to check for
+ *@delim will give us the delimiter info, This will return 1 if it comes true and 0 if it is fals
  */
 
 int is_delim(char c, char *delim)
@@ -25,7 +25,7 @@ int is_delim(char c, char *delim)
 }
 
 /**
- * The _isalpha will check for alphabetic yeye
+ *The _isalpha will check for alphabetic yeye
  */
 
 int _isalpha(int c)
@@ -35,7 +35,11 @@ int _isalpha(int c)
 	else
 		return (0);
 }
-
+/**
+ *_atoi will convert the string to an integer
+ *The string to be converted is @s
+ *Returns 0 if no number in string is converted
+ */
 int _atoi(char *s)
 {
 	int i, sign = 1, flag = 0, output;
